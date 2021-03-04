@@ -1,0 +1,27 @@
+{
+    "name": "First List",
+    "list": [
+        {
+            "id": 0,
+            "text": "A",
+            "done": false
+        },
+        {
+            "id": 1,
+            "text": "B",
+            "done": false
+        },
+        {
+            "id": 2,
+            "text": "C",
+            "done": false
+        }
+    ],
+    "users": [
+        "@p1",
+        "@p2",
+        "@p3",
+        "@p4",
+        "@p5"
+    ]
+}
