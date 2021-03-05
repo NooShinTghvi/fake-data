@@ -1,24 +1,52 @@
 {
-  "list": [
-    { "id": 1, "text": "Post 1" },
-    { "id": 2, "text": "Post 2" },
-    { "id": 3, "text": "Post 3" }
-  ],
-  "lists_name": [
-    "list1",
-    "list2",
-    "list3"
-   ],
-  "team": [
-    "@p1",
-    "@p2",
-    "@p3",
-   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "status": [
+        "todo",
+        "in_progress",
+        "in_review"
+    ],
+    "list": [
+        {
+            "id": 1,
+            "text": "Post 1",
+            "status": "todo",
+            "done": false
+        },
+        {
+            "id": 2,
+            "text": "Post 2",
+            "status": "todo",
+            "done": false
+        },
+        {
+            "id": 3,
+            "text": "Post 3",
+            "status": "todo",
+            "done": false
+        }
+    ],
+    "lists_name": [
+        "list1",
+        "list2",
+        "list3"
+    ],
+    "team": [
+        "@p1",
+        "@p2",
+        "@p3"
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        },
+        {
+            "id": 2,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
 }
