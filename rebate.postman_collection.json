@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "8f1de1fe-ddcf-40c4-bfef-543a62822468",
+		"name": "rebate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9648064"
+	},
+	"item": [
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_rebate_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "key",
+									"value": "window-factor",
+									"description": "name of factor",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "some explanation",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}:{{port}}/api/comment",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all comment on file",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}:{{port}}/api/comment?file_rebate_id=1",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"comment"
+							],
+							"query": [
+								{
+									"key": "file_rebate_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}:{{port}}/api/comment/2?file_rebate_id=1&key=ATTIC&content=wood",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"comment",
+								"2"
+							],
+							"query": [
+								{
+									"key": "file_rebate_id",
+									"value": "1"
+								},
+								{
+									"key": "key",
+									"value": "ATTIC"
+								},
+								{
+									"key": "content",
+									"value": "wood"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}:{{port}}/api/comment/1",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signature",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_rebate_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor_signature",
+									"value": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+									"description": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "advisor_draw",
+									"value": "x=50,y=70",
+									"description": "x=50,y=70",
+									"type": "text"
+								},
+								{
+									"key": "advisor_date",
+									"value": "2023-06-23",
+									"type": "text"
+								},
+								{
+									"key": "user_signature",
+									"value": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+									"description": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user_draw",
+									"value": "x=50,y=70",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user_date",
+									"value": "2023-06-25",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}:{{port}}/api/signature",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"signature"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lusius Signature",
+			"item": [
+				{
+					"name": "advisor Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_rebate_id",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "owner",
+									"value": "advisor",
+									"type": "text"
+								},
+								{
+									"key": "signature",
+									"type": "file",
+									"src": "/C:/Users/noosh/OneDrive/Desktop/photo_2023-05-19_21-37-37.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8181/api/user/signature",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"user",
+								"signature"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "calculate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "h2kd",
+							"type": "file",
+							"src": "/C:/Drive D/Code/Advisorbudy/9C28D22473.h2k"
+						},
+						{
+							"key": "h2ke",
+							"type": "file",
+							"src": "/C:/Drive D/Code/Advisorbudy/9C28E22473 - Copy.h2k"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/api/calc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"calc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate to pdf data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "h2kd",
+							"type": "file",
+							"src": "/C:/Drive D/Code/Advisorbudy/9C28D22473.h2k",
+							"disabled": true
+						},
+						{
+							"key": "h2ke",
+							"type": "file",
+							"src": "/C:/Drive D/Code/Advisorbudy/9C28E22473.h2k",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/api/5/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"5",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "files",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "jwt",
+					"jwt": [
+						{
+							"key": "algorithm",
+							"value": "HS256",
+							"type": "string"
+						},
+						{
+							"key": "isSecretBase64Encoded",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "payload",
+							"value": "{}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "queryParamKey",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "header",
+							"value": "{}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file_rebate_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "key",
+							"value": "ATTIC",
+							"description": "name of factor",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "some explain",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}:{{port}}/api/files/14",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"files",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
